@@ -10,3 +10,13 @@ Het bedenken van een concept vond ik nog wel lastig, ik heb na een hele dag werk
 
 
 ### Donderdag 2 April
+Ik heb vandaag met Jad overlegd over mijn idee. Het maken van een planner voor Animal Crossing is niet heel leuk en eigenlijk ook te simpel, dat is omdat de calender API niet zo interessant is. Wat wel een leuk idee is is om een soort dress-up game te maken voor je Animal Crossing karakter. In de game heb je een hele brede keuze aan kleding en ik wil dus de mogelijkheid bieden om deze items uit te proberen voordat je ze kan kopen. In de game zit er namelijk ook een limiet aan hoelang de items in de winkels zijn. 
+
+Ik moet nog wel bedenken hoe ik dit techinisch ga maken en welke web-api's ik ga gebruiken bij deze website. 
+
+### Afronding week 1
+Ik was heel bang dat de opdracht voor API heel moeilijk zal worden, maar ik vind het achteraf wel leuk dat we heel vrij zijn om te kiezen wat we willen maken. Ik had wel heel lang nodig om een goed idee uit te werken dat gebruik maakt van meerdere api's tot een concept, dat is ook omdat ik niet veel verstand heb van API's. 
+
+Ik hoop volgende week de eerste stappen te kunnen maken en ervoor te zorgen dat ik de benodigden data van api in mijn website kan zetten. 
+
+
