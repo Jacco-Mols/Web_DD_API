@@ -8,7 +8,6 @@ Mijn eerste dag voor API vond ik wel interessant, ik heb voor het eerst gewerkt 
 
 Het bedenken van een concept vond ik nog wel lastig, ik heb na een hele dag werken nog geen goed conept. Ik wil heb wel als idee om een planner specifiek voor Animal Crossing, hierin kan je dus een to-do list maken, een calender bijhouden en een dagelijke routine aanmaken. Andere ideeën van mij betrokken de star wars api omdat hier ook een grote fan van ben. Ik wil bijvoorbeeld een sterrenmap maken waarin je kan bekijken waar elke planeet licht, dit lijkt me alleen erg lastig te maken. In overleg met de docent zijn deze ideeën nog niet creatief genoeg en betrekken ze niet genoeg web-api's. 
 
-
 ### Donderdag 2 April
 Ik heb vandaag met Jad overlegd over mijn idee. Het maken van een planner voor Animal Crossing is niet heel leuk en eigenlijk ook te simpel, dat is omdat de calender API niet zo interessant is. Wat wel een leuk idee is is om een soort dress-up game te maken voor je Animal Crossing karakter. In de game heb je een hele brede keuze aan kleding en ik wil dus de mogelijkheid bieden om deze items uit te proberen voordat je ze kan kopen. In de game zit er namelijk ook een limiet aan hoelang de items in de winkels zijn. 
 
@@ -19,4 +18,12 @@ Ik was heel bang dat de opdracht voor API heel moeilijk zal worden, maar ik vind
 
 Ik hoop volgende week de eerste stappen te kunnen maken en ervoor te zorgen dat ik de benodigden data van api in mijn website kan zetten. 
 
+## Week 2
+
+### Woensdag 8 april
+In de ochtend hadden we een workshop over het gebruiken van Astro componenten en vaste layouts. Ik vond het wel een nuttige workshop maar ook wel lastig te volgen, omdat veel leerlingen er doorheen aan het praten waren. Ik heb wel geleerd hoe je een layout maakt en die weer import naar andere pagina's en een herhaling van de basics over het ophalen van een api. 
+
+Verder heb ik me vandaag op mijn idee gericht. Ik kwam erachter dat de api die ik wilde gebruiken (en ook de andere api's) betaald zijn en/of een api key nodig hebben. Omdat ik hier veel te lang op moet wachten ga ik aan de gang met een andere idee. Ik wil namelijk een Who's that pokemon? maken maar dan met pokemon kaarten. In plaats van dat het een sillhouette is zie je de kaart wel maar dan geblurred. Tot nu toe lukt dat goed en zijn deze api's beter te gebruiken dan die van Animal crossing. Ik heb er voor nu voor gezorgd dat ik de data in mijn terminal zie van veel pokemon kaarten. 
+
+Ik vind het nog wel lastig om er mee te beginnen, alle api's zijn anders en de code vind ik nogal complex, maar ik denk dat ik er wel uit moet komen uiteindelijk.
 
