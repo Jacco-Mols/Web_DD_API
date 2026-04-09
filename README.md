@@ -27,3 +27,15 @@ Verder heb ik me vandaag op mijn idee gericht. Ik kwam erachter dat de api die i
 
 Ik vind het nog wel lastig om er mee te beginnen, alle api's zijn anders en de code vind ik nogal complex, maar ik denk dat ik er wel uit moet komen uiteindelijk.
 
+
+### Donderdag 9 april
+Vandaag heb ik hele grote sprongen gemaakt aan mijn project. Ik heb tot nu toe een eerste versie van mijn site waarom je nu een willekeurige pokemon kaart krijgt zodra je de browser herlaadt. Dit koste me wel wat moeite, ik moest eerst ervoor zorgen dat ik een afbeelding over het algemeen zie, vervolgens heb ik alle objecten zonder een image property of een name met "unown" eruit gefilterd.
+
+Tot nu toe heb ik al veel geleerd over bijvoorbeeld Math.random, hoe je data van een api filtered en hoe je een quality of extension aan elke afbeelding kan meegeven. Om dit te leren heb ik veel aan klasgenoten of docenten gevraagd en veel laten uitleggen door AI, hierdoor kwam ik er bijvoorbeeld achter dat "of" in JavaScript "||" is. Verder heb ik ook veel opgezocht op bijvoorbeeld mdn. 
+
+Ik hoop volgende week ervoor te kunnen zorgen dat je doormiddel van de text input de naam van de pokemon kan raden en vervolgens een nieuwe kaart kan laden. Ook heb ik door de workshop van Jad een counter in JavaScript gemaakt die doormiddel van localStorage het getal opslaat. Het leek me leuk om hiermee een soort punten systeem te maken. 
+
+Eerste versie:
+
+<img width="1224" height="773" alt="first pokemon version" src="https://github.com/user-attachments/assets/0ee5f11a-c705-4eb6-8345-c71b08f3b317" />
+
