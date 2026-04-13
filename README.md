@@ -39,3 +39,8 @@ Eerste versie:
 
 <img width="1224" height="773" alt="first pokemon version" src="https://github.com/user-attachments/assets/0ee5f11a-c705-4eb6-8345-c71b08f3b317" />
 
+
+### Afronding week 2
+Ik ben de laatste 2 weken erg van het ene idee naar het andere idee gesprongen. Dat is voornamelijk omdat nog niet zo veel met api's heb gewerkt waardoor ik geen idee welke goed zijn of juist heel moeilijk. Ik denk dat ik hier wel erg van heb geleerd en volgende komende keren van te voren goed checken of een api gratis is, betaald of dat je mogelijk hier een api key voor nodig hebt. Verder ben ik wel trots op alles dat ik tot nu toe heb gemaakt, veel code is nieuw voor mij dus ik heb veel sprongen gemaakt naar het begrijpen van JavaScript. Verder ben ik veel aan het vragen over code aan klasgenoten die hier beter in zijn, docenten en ook AI om het een en andere uit te leggen. 
+
+#### Gesprek van 10 April ingehaald op ....
