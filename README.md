@@ -43,4 +43,12 @@ Eerste versie:
 ### Afronding week 2
 Ik ben de laatste 2 weken erg van het ene idee naar het andere idee gesprongen. Dat is voornamelijk omdat nog niet zo veel met api's heb gewerkt waardoor ik geen idee welke goed zijn of juist heel moeilijk. Ik denk dat ik hier wel erg van heb geleerd en volgende komende keren van te voren goed checken of een api gratis is, betaald of dat je mogelijk hier een api key voor nodig hebt. Verder ben ik wel trots op alles dat ik tot nu toe heb gemaakt, veel code is nieuw voor mij dus ik heb veel sprongen gemaakt naar het begrijpen van JavaScript. Verder ben ik veel aan het vragen over code aan klasgenoten die hier beter in zijn, docenten en ook AI om het een en andere uit te leggen. 
 
-#### Gesprek van 10 April ingehaald op ....
+#### Gesprek van 10 April ingehaald op 15 April
+Het idee met pokemon kaarten is eigenlijk niet heel creatief. Ik heb daarnaast the API key gekregen van de Animal crossing api waardoor ik hier verder mee zal werken. Hier heb ik nu een concreter beeld bij ook met welke web API's zal werken. Het is idee is om een lijst te maken met alle Animal Crossing villagers, voor elke villager heb je een detail pagina waarin je alle clothing items kan toepassen op de gekozen villager met een drag n drop web API. Daarnaast zal ik gebruik maken van de Canvas API. Hiermee maak je een dynamische website om karakters op verschillende manieren te kleden. 
+
+
+### Woensdag 15 April 
+Ik heb vandaag het gepsrek ingehaald me Jad. 
+
+Ik heb tot nu toe de eerste stappen gezet om de website te maken, ik heb bijvoorbeeld een lijst kunnen maken met villagers van de api en voor elke villager een dynamische detail pagina kunnen maken. De detail pagina heb ik gemaakt met hulp van de workshop van Jad. Hierin had hij uitgelegd hoe je verschillende detail pagina's maakt voor hele lange lijsten met bijvoorbeeld pokemon of animal crossing karakters. 
+
