@@ -52,3 +52,6 @@ Ik heb vandaag het gepsrek ingehaald me Jad.
 
 Ik heb tot nu toe de eerste stappen gezet om de website te maken, ik heb bijvoorbeeld een lijst kunnen maken met villagers van de api en voor elke villager een dynamische detail pagina kunnen maken. De detail pagina heb ik gemaakt met hulp van de workshop van Jad. Hierin had hij uitgelegd hoe je verschillende detail pagina's maakt voor hele lange lijsten met bijvoorbeeld pokemon of animal crossing karakters. 
 
+
+### Donderdag 16 April
+Omdat het een beetje een chaotische dag was heb ik niet super veel kunnen doen. Ik heb vandaag ervoor gezorgd dat ik in de api apart filter naar de villagers (karakters) en de verschillende kleding stukken dus hoeden, brillen etc. Verder heb ik nog wat styling toegevoegd aan de home en detail pagina. 
