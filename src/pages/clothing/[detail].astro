@@ -30,7 +30,7 @@ const clothesResponse = await fetch(urlClothes, {
 });
 
 const clothesData = await clothesResponse.json();
-
+// this is a test
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
 console.log(headwearFilter[3])
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
@@ -55,7 +55,7 @@ const headwear = headwearFilter.slice(0, 50);
             <article class="headwear-container">
                 <ul class="headwear">
                     {headwear.map(head => (
-                        <li>
+                       <li>
                             <img src={head.variations[0].image_url} alt={head.name} />
                         </li>
                     ))}
