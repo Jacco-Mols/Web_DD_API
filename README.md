@@ -70,6 +70,11 @@ function dragStart(event) {
         event.dataTransfer.setData('text', event.target.id);
 };
 
+even later kan je dus weer event.dataTransfer.getData('text'); doen. Verder werk je veel met eventListeners die luisteren naar verschillende events zoals 'dragstart', 'drop' of 'dragover'.
+
+<img width="1261" height="777" alt="week4_api" src="https://github.com/user-attachments/assets/21b53d29-10d7-4e98-a51c-835d9a25d459" />
+
+
 ###Bronnen
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 https://codepen.io/Jacco01/pen/WbGPgmv
