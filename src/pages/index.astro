@@ -1,0 +1,42 @@
+---
+// @ts-nocheck
+import '../styles/vars.css';
+import '../styles/pokemoncard.css';
+import '../styles/global.css';
+import '../styles/villagers.css';
+
+const url = "https://api.nookipedia.com/villagers?pagination[itemsPerPage]=50";
+const response = await fetch(url, {
+    headers: {
+        "X-API-KEY": import.meta.env.PUBLIC_NOOK_API_KEY,
+        "Accept-Version": "1.0.0"
+    }
+});
+
+const data = await response.json();
+const villagers = data.slice(0, 50);
+---
+
+<!-- Animal crossing -->
+<html lang="en">
+    <body>
+        <header></header>
+        <main>
+
+            <ul class="villagers-grid">
+                {villagers.map(villager => (
+                    <li>
+                        <p>{villager.name}</p>
+                        <a href={"/clothing/" + villager.name}><img src={villager.image_url} alt={villager.name} /></a>
+                    </li>
+                ))}
+            </ul>
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
+<script define:vars={{ villagers }}>
+    
+
+</script>

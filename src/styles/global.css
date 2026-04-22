@@ -1,0 +1,23 @@
+body {
+    padding: 1rem;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    text-align:center;
+    justify-self: center;
+    font-family: sans-serif;
+}
+
+h2, h3, p {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}

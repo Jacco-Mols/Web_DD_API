@@ -1,0 +1,52 @@
+img {
+    max-width: 100%;
+}
+
+.pokemon-container, .points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* pokemon cards styling */
+.pokemon-card {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 2rem;
+
+    img {
+        width: 20rem;
+        border-radius: 1rem;
+    }
+}
+
+input[type=text] {
+    margin-bottom: 2rem;
+    width: 10rem;
+}
+
+.input-color {
+    background-color: green;
+    border: solid 3px green;
+}
+
+.guess-button {
+    width: 6rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+
+    &:active {
+        background-color: white;
+        color: black;
+    }
+}
+
+
+
+/* blurred pokemon cards */
+/* .blur {
+    filter: contrast(300%);
+    filter: blur(10px);
+} */
