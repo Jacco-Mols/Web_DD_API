@@ -1,7 +1,6 @@
 ---
 // @ts-nocheck
 import '../styles/vars.css';
-import '../styles/pokemoncard.css';
 import '../styles/global.css';
 import '../styles/villagers.css';
 
@@ -16,13 +15,11 @@ const response = await fetch(url, {
 const data = await response.json();
 const villagers = data.slice(0, 50);
 ---
-
 <!-- Animal crossing -->
 <html lang="en">
     <body>
         <header></header>
         <main>
-
             <ul class="villagers-grid">
                 {villagers.map(villager => (
                     <li>
