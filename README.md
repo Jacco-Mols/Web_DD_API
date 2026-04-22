@@ -1,43 +1,58 @@
-# Astro Starter Kit: Minimal
+# Web_DD_API
 
-```sh
-npm create astro@latest -- --template minimal
-```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Week 1 API
 
-## 🚀 Project Structure
+### Woensdag 1 April
+Mijn eerste dag voor API vond ik wel interessant, ik heb voor het eerst gewerkt met Astro, een framework dat je via je terminal kan instaleren en gebruiken. De terminal vind ik nog wel even wennen, het is niet nieuw voor mij, maar ik heb een hele lange tijd niet mee gewerkt waardoor ik alles vergeten was. Verder was het werken met de terminal wel soepel verlopen. 
 
-Inside of your Astro project, you'll see the following folders and files:
+Het bedenken van een concept vond ik nog wel lastig, ik heb na een hele dag werken nog geen goed conept. Ik wil heb wel als idee om een planner specifiek voor Animal Crossing, hierin kan je dus een to-do list maken, een calender bijhouden en een dagelijke routine aanmaken. Andere ideeën van mij betrokken de star wars api omdat hier ook een grote fan van ben. Ik wil bijvoorbeeld een sterrenmap maken waarin je kan bekijken waar elke planeet licht, dit lijkt me alleen erg lastig te maken. In overleg met de docent zijn deze ideeën nog niet creatief genoeg en betrekken ze niet genoeg web-api's. 
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Donderdag 2 April
+Ik heb vandaag met Jad overlegd over mijn idee. Het maken van een planner voor Animal Crossing is niet heel leuk en eigenlijk ook te simpel, dat is omdat de calender API niet zo interessant is. Wat wel een leuk idee is is om een soort dress-up game te maken voor je Animal Crossing karakter. In de game heb je een hele brede keuze aan kleding en ik wil dus de mogelijkheid bieden om deze items uit te proberen voordat je ze kan kopen. In de game zit er namelijk ook een limiet aan hoelang de items in de winkels zijn. 
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Ik moet nog wel bedenken hoe ik dit techinisch ga maken en welke web-api's ik ga gebruiken bij deze website. 
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Afronding week 1
+Ik was heel bang dat de opdracht voor API heel moeilijk zal worden, maar ik vind het achteraf wel leuk dat we heel vrij zijn om te kiezen wat we willen maken. Ik had wel heel lang nodig om een goed idee uit te werken dat gebruik maakt van meerdere api's tot een concept, dat is ook omdat ik niet veel verstand heb van API's. 
 
-Any static assets, like images, can be placed in the `public/` directory.
+Ik hoop volgende week de eerste stappen te kunnen maken en ervoor te zorgen dat ik de benodigden data van api in mijn website kan zetten. 
 
-## 🧞 Commands
+## Week 2
 
-All commands are run from the root of the project, from a terminal:
+### Woensdag 8 april
+In de ochtend hadden we een workshop over het gebruiken van Astro componenten en vaste layouts. Ik vond het wel een nuttige workshop maar ook wel lastig te volgen, omdat veel leerlingen er doorheen aan het praten waren. Ik heb wel geleerd hoe je een layout maakt en die weer import naar andere pagina's en een herhaling van de basics over het ophalen van een api. 
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Verder heb ik me vandaag op mijn idee gericht. Ik kwam erachter dat de api die ik wilde gebruiken (en ook de andere api's) betaald zijn en/of een api key nodig hebben. Omdat ik hier veel te lang op moet wachten ga ik aan de gang met een andere idee. Ik wil namelijk een Who's that pokemon? maken maar dan met pokemon kaarten. In plaats van dat het een sillhouette is zie je de kaart wel maar dan geblurred. Tot nu toe lukt dat goed en zijn deze api's beter te gebruiken dan die van Animal crossing. Ik heb er voor nu voor gezorgd dat ik de data in mijn terminal zie van veel pokemon kaarten. 
 
-## 👀 Want to learn more?
+Ik vind het nog wel lastig om er mee te beginnen, alle api's zijn anders en de code vind ik nogal complex, maar ik denk dat ik er wel uit moet komen uiteindelijk.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+### Donderdag 9 april
+Vandaag heb ik hele grote sprongen gemaakt aan mijn project. Ik heb tot nu toe een eerste versie van mijn site waarom je nu een willekeurige pokemon kaart krijgt zodra je de browser herlaadt. Dit koste me wel wat moeite, ik moest eerst ervoor zorgen dat ik een afbeelding over het algemeen zie, vervolgens heb ik alle objecten zonder een image property of een name met "unown" eruit gefilterd.
+
+Tot nu toe heb ik al veel geleerd over bijvoorbeeld Math.random, hoe je data van een api filtered en hoe je een quality of extension aan elke afbeelding kan meegeven. Om dit te leren heb ik veel aan klasgenoten of docenten gevraagd en veel laten uitleggen door AI, hierdoor kwam ik er bijvoorbeeld achter dat "of" in JavaScript "||" is. Verder heb ik ook veel opgezocht op bijvoorbeeld mdn. 
+
+Ik hoop volgende week ervoor te kunnen zorgen dat je doormiddel van de text input de naam van de pokemon kan raden en vervolgens een nieuwe kaart kan laden. Ook heb ik door de workshop van Jad een counter in JavaScript gemaakt die doormiddel van localStorage het getal opslaat. Het leek me leuk om hiermee een soort punten systeem te maken. 
+
+Eerste versie:
+
+<img width="1224" height="773" alt="first pokemon version" src="https://github.com/user-attachments/assets/0ee5f11a-c705-4eb6-8345-c71b08f3b317" />
+
+
+### Afronding week 2
+Ik ben de laatste 2 weken erg van het ene idee naar het andere idee gesprongen. Dat is voornamelijk omdat nog niet zo veel met api's heb gewerkt waardoor ik geen idee welke goed zijn of juist heel moeilijk. Ik denk dat ik hier wel erg van heb geleerd en volgende komende keren van te voren goed checken of een api gratis is, betaald of dat je mogelijk hier een api key voor nodig hebt. Verder ben ik wel trots op alles dat ik tot nu toe heb gemaakt, veel code is nieuw voor mij dus ik heb veel sprongen gemaakt naar het begrijpen van JavaScript. Verder ben ik veel aan het vragen over code aan klasgenoten die hier beter in zijn, docenten en ook AI om het een en andere uit te leggen. 
+
+#### Gesprek van 10 April ingehaald op 15 April
+Het idee met pokemon kaarten is eigenlijk niet heel creatief. Ik heb daarnaast the API key gekregen van de Animal crossing api waardoor ik hier verder mee zal werken. Hier heb ik nu een concreter beeld bij ook met welke web API's zal werken. Het is idee is om een lijst te maken met alle Animal Crossing villagers, voor elke villager heb je een detail pagina waarin je alle clothing items kan toepassen op de gekozen villager met een drag n drop web API. Daarnaast zal ik gebruik maken van de Canvas API. Hiermee maak je een dynamische website om karakters op verschillende manieren te kleden. 
+
+## Week 3
+
+### Woensdag 15 April 
+Ik heb vandaag het gepsrek ingehaald me Jad. 
+
+Ik heb tot nu toe de eerste stappen gezet om de website te maken, ik heb bijvoorbeeld een lijst kunnen maken met villagers van de api en voor elke villager een dynamische detail pagina kunnen maken. De detail pagina heb ik gemaakt met hulp van de workshop van Jad. Hierin had hij uitgelegd hoe je verschillende detail pagina's maakt voor hele lange lijsten met bijvoorbeeld pokemon of animal crossing karakters. 
+
+
+### Donderdag 16 April
+Omdat het een beetje een chaotische dag was heb ik niet super veel kunnen doen. Ik heb vandaag ervoor gezorgd dat ik in de api apart filter naar de villagers (karakters) en de verschillende kleding stukken dus hoeden, brillen etc. Verder heb ik nog wat styling toegevoegd aan de home en detail pagina. 
