@@ -30,7 +30,7 @@ header {
     margin: 2rem;
     margin-top: 0;
     
-    img {
+    .villager-img {
         max-width: 100%;
         height: 50vh;
         justify-self: center;
@@ -65,4 +65,28 @@ header {
             }
         }
     }
+}
+
+.droppable {
+    width: 15rem;
+    height: 11rem;
+    position: absolute;
+    top: 17%;
+    /* border: dotted 10px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropped {
+    width: 10rem;
+    justify-self: center;
+}
+
+.remove-items {
+    display: none;
+}
+
+.show {
+    display: block;
 }

@@ -35,32 +35,35 @@ const headwearFilter = clothesData.filter(clotheData => clotheData.category === 
 console.log(headwearFilter[3])
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 const headwear = headwearFilter.slice(0, 50);
-
 ---
 
 <html lang="en">
 <body>
     <header>
         <button class="goback"><a href="/">Go back</a></button>
-        
     </header>
 
     <main>
         <section class="dress-character">
             <div class="villager-container" >
+                <div class="droppable" data-draggable-id="acorn knit cap"></div>
                 <h1>{character}</h1>
-                <img src={details.image_url} alt={details.name} />
+                <img src={details.image_url} alt={details.name} class="villager-img" />
             </div>
 
             <article class="headwear-container">
                 <ul class="headwear">
                     {headwear.map(head => (
-                       <li>
-                            <img src={head.variations[0].image_url} alt={head.name} />
+                        <li>
+                            <img src={head.variations[0].image_url} alt={head.name} class='draggable'
+                            draggable="true" id={`hat-${head.name}`} />
                         </li>
                     ))}
                 </ul>
+
+                <button class="remove-items">Remove all items</button>
             </article>
+
         </section>
     </main>
 
@@ -70,4 +73,47 @@ const headwear = headwearFilter.slice(0, 50);
 </html>
 
 <script>
+    // @ts-nocheck
+    // https://codepen.io/Jacco01/pen/WbGPgmv - voorbeeld van drag n drop api
+    const droppableElement = document.querySelectorAll('.droppable');
+    const draggableElement = document.querySelectorAll('.draggable');
+
+    const removeItemsButton = document.querySelector('.remove-items');
+
+    draggableElement.forEach(item => {
+        item.addEventListener('dragstart', dragStart);
+    });
+
+    droppableElement.forEach(item => {
+        item.addEventListener('dragover', dragOver);
+        item.addEventListener('drop', drop);
+    });
+
+    function dragStart(event) {
+        event.dataTransfer.setData('text', event.target.id);
+    };
+
+    function dragOver(event) {
+        event.preventDefault();
+    } 
+
+    function drop(event) {
+        event.preventDefault();
+
+        const draggedItem = event.dataTransfer.getData('text');
+        const dropId = event.target.getAttribute('data-draggable-id');
+        const draggedEl = document.getElementById(draggedItem);
+        event.target.appendChild(draggedEl);
+        draggedEl.classList.add('dropped');
+        console.log('oops');
+
+        removeItemsButton.classList.add('show')
+    }
+
+    // Help from AI - how do I remove all currently equipped items when a button is clicked
+    removeItemsButton.addEventListener('click', removeItems())
+    function removeItems() {
+
+    }
+
 </script>
