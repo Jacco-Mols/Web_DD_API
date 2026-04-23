@@ -56,3 +56,30 @@ Ik heb tot nu toe de eerste stappen gezet om de website te maken, ik heb bijvoor
 
 ### Donderdag 16 April
 Omdat het een beetje een chaotische dag was heb ik niet super veel kunnen doen. Ik heb vandaag ervoor gezorgd dat ik in de api apart filter naar de villagers (karakters) en de verschillende kleding stukken dus hoeden, brillen etc. Verder heb ik nog wat styling toegevoegd aan de home en detail pagina. 
+
+## Week 4
+
+### Woensdag 22 April 
+In de ochtend hebben we met en workshop ervoor gezorgd dat de code online staat via Render.com. Dit vond ik heel lastig en eerlijk gezegd niet heel leuk. Ik kwam er ook achter dat ik vergeten was om mijn bestanden op mijn github repository te zetten. Dit wekte veel problemen op en zorgde ervoor dat ik heel bezig was met errors op render en in de terminal. Jad had me hiermee gelukkig geholpen.
+
+Verder heb ik vandaag een drag 'n drop web API toegeovegd aan de kleding stukken die in mijn content api staat. Ik heb nooit eerder met web API's gewerkt waardoor dit lang duurde. Ik heb gelukkig een voorbeeld gevonden die iets simpels met drag 'n drop had gemaakt wat ik als voorbeeld heb gebruikt om verder te komen. De code van de codepen heb ik ook laten uitleggen door Ai waardoor ik veel meer ervan begreep. Ik had ook veel type fouten gemaakt in mijn code zoals: .getAtrribute in plaats van .getAttribute. 
+
+de drag and drop api werkt dus met een dataTransfer functie. Je kan hier dus data inzetten terwijl je een item dragged en kan deze data er weer uit halen op het moment dat je het dropped. bijvoorbeeld:
+
+function dragStart(event) {
+        event.dataTransfer.setData('text', event.target.id);
+};
+
+even later kan je dus weer event.dataTransfer.getData('text'); doen. Verder werk je veel met eventListeners die luisteren naar verschillende events zoals 'dragstart', 'drop' of 'dragover'.
+
+Huidige detail pagina:
+<img width="1261" height="777" alt="week4_api" src="https://github.com/user-attachments/assets/21b53d29-10d7-4e98-a51c-835d9a25d459" />
+
+
+###Bronnen
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+https://codepen.io/Jacco01/pen/WbGPgmv
+
+AI prompts:
+How do I remove all currently equipped items when a button is clicked
+
