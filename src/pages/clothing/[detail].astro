@@ -40,7 +40,7 @@ const headwear = headwearFilter.slice(50, 100);
 <html lang="en">
 <body>
     <header>
-        <button class="goback"><a href="/">Go back</a></button>
+        <a href="/"><button>Go back</button></a>
     </header>
 
     <main>
@@ -58,7 +58,7 @@ const headwear = headwearFilter.slice(50, 100);
                         // want we maken later gebruik van "li:empty"
                         <li><img src={head.variations[0].image_url} alt={head.name} class='draggable'
                             draggable="true" id={`hat-${head.name}`} /></li>
-                    ))}
+                    ))};
                 </ul>
 
                 <button class="remove-items">Remove all items</button>
@@ -72,8 +72,9 @@ const headwear = headwearFilter.slice(50, 100);
 
 </html>
 
-<script>
+<script define:vars={ { details }}>
     // @ts-nocheck
+
     // https://codepen.io/Jacco01/pen/WbGPgmv - voorbeeld van drag n drop api
     const droppableElement = document.querySelectorAll('.droppable');
     const draggableElement = document.querySelectorAll('.draggable');
@@ -95,7 +96,7 @@ const headwear = headwearFilter.slice(50, 100);
 
     function dragOver(event) {
         event.preventDefault();
-    } 
+    };
 
     function drop(event) {
         event.preventDefault();
@@ -111,7 +112,6 @@ const headwear = headwearFilter.slice(50, 100);
         // remove item button
         const removeItemsButton = document.querySelector('.remove-items');
         removeItemsButton.classList.add('show');
-
 
         // Met hulp van Jad
         const droppedItem = document.querySelector(".droppable .dropped");
@@ -131,6 +131,7 @@ const headwear = headwearFilter.slice(50, 100);
         document.querySelector(".droppable").appendChild(draggedEl);
         draggedEl.classList.add('dropped');
 
+        equippedItem = droppedItem
 
     }
 
