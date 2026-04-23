@@ -7,16 +7,37 @@
     gap: 2rem;
 
     li {
-        background-color: white;
+        background-color: var(--interface-color-beige);
         width: 100%;
-        height: 100%;
+        height: 25rem;
+        aspect-ratio: 2/1;
         display: grid;
         justify-content: center;
-        border: solid 3px transparent;
         border-radius: 10px;
+        border: solid 5px var(--interface-color-beige);
+        /* background-size: 75vw 100%; */
 
         &:hover {
-            border: solid 3px rgb(199, 199, 199);
+
+            /* Have to fix angle issue */
+            /* https://codepen.io/fossheim/pen/RwPeVKG?editors=0100 */
+            /* background-image: repeating-linear-gradient(
+                145deg,
+                transparent 0px,
+                transparent 30px,
+                var(--interface-color-green) 30px,
+                var(--interface-color-green) 60px
+
+            );
+            animation: background-change 3s linear infinite; */
+            transform: scale(1.05);
+            cursor: pointer;
+            background-color: var(--interface-color-green);
+
+            img {
+                /* transition: .5s;
+                width: 11em; */
+            }
         }
     }
 
@@ -24,7 +45,17 @@
         max-width: 100%;
         width: 10rem;
     }
+
     p {
         text-align: center;
+    }
+}
+
+@keyframes background-change {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400px 0px;
     }
 }

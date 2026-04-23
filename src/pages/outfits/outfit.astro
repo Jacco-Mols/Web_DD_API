@@ -1,0 +1,54 @@
+---
+// @ts-nocheck
+import '../../styles/global.css';
+import '../../styles/vars.css';
+
+const urlVillagers = "https://api.nookipedia.com/villagers?pagination[itemsPerPage]=50";
+const Villagersresponse = await fetch(urlVillagers, {
+    headers: {
+        "X-API-KEY": import.meta.env.PUBLIC_NOOK_API_KEY,
+        "Accept-Version": "1.0.0"
+    }
+});
+
+const data = await Villagersresponse.json();
+const villagers = data.slice(0, 100);
+
+// astro.params van workshop met Jad
+const character = Astro.params.detail
+
+// Met hulp van Jad gemaakt, zoekt naar de villager met precies dezelfde naam als die van character
+const details = villagers.find( villager => villager.name === character)
+
+const urlClothes = "https://api.nookipedia.com/nh/clothing?pagination[itemsPerPage]=50";
+const clothesResponse = await fetch(urlClothes, {
+    headers: {
+        "X-API-KEY": import.meta.env.PUBLIC_NOOK_API_KEY,
+        "Accept-Version": "1.0.0"
+    }
+});
+
+const clothesData = await clothesResponse.json();
+// this is a test
+const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
+console.log(headwearFilter[3])
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+const headwear = headwearFilter.slice(50, 100);
+---
+
+<html lang="en">
+
+    <body>
+        <header>
+            <h1>Saved outfits</h1>
+        </header>
+        <main></main>
+        <footer></footer>
+        
+    </body>
+</html>
+
+<script>
+    // @ts-nocheck
+
+</script>

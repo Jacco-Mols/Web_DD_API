@@ -34,7 +34,7 @@ const clothesData = await clothesResponse.json();
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
 console.log(headwearFilter[3])
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-const headwear = headwearFilter.slice(0, 50);
+const headwear = headwearFilter.slice(50, 100);
 ---
 
 <html lang="en">
@@ -54,10 +54,10 @@ const headwear = headwearFilter.slice(0, 50);
             <article class="headwear-container">
                 <ul class="headwear">
                     {headwear.map(head => (
-                        <li>
-                            <img src={head.variations[0].image_url} alt={head.name} class='draggable'
-                            draggable="true" id={`hat-${head.name}`} />
-                        </li>
+                        // LET OP: <li> en <img> moeten altijd aan elkaar verbonden zijn (zonder spaties)
+                        // want we maken later gebruik van "li:empty"
+                        <li><img src={head.variations[0].image_url} alt={head.name} class='draggable'
+                            draggable="true" id={`hat-${head.name}`} /></li>
                     ))}
                 </ul>
 
@@ -99,20 +99,38 @@ const headwear = headwearFilter.slice(0, 50);
 
     function drop(event) {
         event.preventDefault();
-
+        // Let op: niet altijd de echte dropZone
+        const dropZone = event.target;
         const draggedItem = event.dataTransfer.getData('text');
         const dropId = event.target.getAttribute('data-draggable-id');
         const draggedEl = document.getElementById(draggedItem);
-        event.target.appendChild(draggedEl);
+
+        // ul list of items
+        const ogList = document.querySelector('.headwear');
+
+        // remove item button
+        const removeItemsButton = document.querySelector('.remove-items');
+        removeItemsButton.classList.add('show');
+
+
+        // Met hulp van Jad
+        const droppedItem = document.querySelector(".droppable .dropped");
+        if (droppedItem) {
+            droppedItem.classList.remove("dropped");
+            ogList.querySelector("li:empty").appendChild(droppedItem);
+        }
+
+        removeItemsButton.addEventListener('click', () => {
+            droppedItem.classList.remove("dropped");
+            ogList.querySelector("li:empty").appendChild(droppedItem);
+            removeItemsButton.classList.remove('show'); 
+        })
+
+        // appendChild - https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+        // Moves element from current position to new position. You are adding a new child to a parent (parent.appendChild(child))
+        document.querySelector(".droppable").appendChild(draggedEl);
         draggedEl.classList.add('dropped');
-        console.log('oops');
 
-        removeItemsButton.classList.add('show')
-    }
-
-    // Help from AI - how do I remove all currently equipped items when a button is clicked
-    removeItemsButton.addEventListener('click', removeItems())
-    function removeItems() {
 
     }
 

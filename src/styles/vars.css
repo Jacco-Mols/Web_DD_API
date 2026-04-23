@@ -1,6 +1,8 @@
 :root {
-    --lightgray: #dadada;
-
-
-    --bg-color: var(--lightgray);
+    --interface-color-lightgray01: #FFFFF7;
+    --interface-color-lightgray02: #F9F4E8;
+    --interface-color-beige: #EEE9CA;
+    --interface-color-yellow: #FFEEA1;
+    --interface-color-green: #72691D;
+    --interface-color-brown: #735C4E;
 }

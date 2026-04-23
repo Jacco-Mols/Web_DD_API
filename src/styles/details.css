@@ -2,8 +2,8 @@ header {
     .goback {
         height: 3rem;
         width: 6rem;
-        background-color: white;
-        border-radius: 2px;
+        background-color: var(--interface-color-beige);
+        border-radius: 99px;
         border: none;
         margin-bottom: 2rem;
 
@@ -20,15 +20,16 @@ header {
 }
 
 .villager-container {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 55vw;
     height: 70vh;
+    background-color: var(--interface-color-beige);
     justify-self: center;
     margin: 2rem;
     margin-top: 0;
+    border-radius: 2rem;
     
     .villager-img {
         max-width: 100%;
@@ -40,9 +41,11 @@ header {
 
 /* headwear */
 .headwear-container {
-    background-color: white;
+    background-color: var(--interface-color-beige);
     width: clamp(30vw, 30vw, 35vw);
     height: 70vh;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
 
     ul {
         display: grid;
@@ -85,8 +88,27 @@ header {
 
 .remove-items {
     display: none;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 99px;
 }
 
 .show {
     display: block;
+}
+
+@media (max-width: 870px) {
+    .dress-character {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .villager-container {
+        width: 75vw;
+    }
+
+    .headwear-container {
+        width: 100%;
+    }
 }
