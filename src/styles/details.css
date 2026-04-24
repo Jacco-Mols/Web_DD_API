@@ -71,11 +71,10 @@ header {
 }
 
 .droppable {
-    width: 15rem;
+    width: 17rem;
     height: 11rem;
     position: absolute;
-    top: 17%;
-    /* border: dotted 10px black; */
+    top: 9%;
     display: flex;
     justify-content: center;
     align-items: center;
