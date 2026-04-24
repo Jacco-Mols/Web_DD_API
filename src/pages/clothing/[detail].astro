@@ -131,7 +131,32 @@ const headwear = headwearFilter.slice(0, 50);
         document.querySelector(".droppable").appendChild(draggedEl);
         draggedEl.classList.add('dropped');
 
-        equippedItem = droppedItem
+        equippedItem = droppedItem;
+
+        savedHat(draggedEl);
+
+        
+
+
+        // Example localstorage
+        // counter
+        // const savedData = JSON.parse(localStorage.getItem("count"))
+
+        // let value = savedData.counter;
+        // const counter = document.querySelector('#counter');
+        // const button = document.querySelector('#add');
+
+        // button.addEventListener('click', () => {
+        //     value = value + 1;
+        //     counter.textContent = value;
+        //     const data = {
+        //         counter: value,
+        //     };
+        //     console.log(data)
+
+        //     // counter opslaan
+        //     localStorage.setItem("count", JSON.stringify(data));
+        // });
 
     }
 
