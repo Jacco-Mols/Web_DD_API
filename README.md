@@ -76,9 +76,11 @@ Huidige detail pagina:
 <img width="1261" height="777" alt="week4_api" src="https://github.com/user-attachments/assets/21b53d29-10d7-4e98-a51c-835d9a25d459" />
 
 ### Donderdag 23 April
-Ik ben vandaag de uitdaging aangegaan om mijn Drag 'n Drop api te verbeteren door ervoor te zorgen dat het equipped item weer terug naar de lijst gaat als je een nieuw item equipped. Dit kost me veel moeite waardoor ik naar Jad was gegaan voor hulp en uitleg. Wat er eerst gebeurde was dat een nieuw item verdwijnde op het moment dat je een nieuwe item equipped als je er al een had. 
+Ik ben vandaag de uitdaging aangegaan om mijn Drag 'n Drop api te verbeteren door ervoor te zorgen dat het equipped item weer terug naar de lijst gaat als je een nieuw item equipped. Dit kost me veel moeite waardoor ik naar Jad was gegaan voor hulp en uitleg. Wat er eerst gebeurde was dat een nieuw item verdwijnde op het moment dat je een nieuwe item equipped als je er al een had. Maar met de hulp van Jad heb ik ervoor gezorgd dat het nieuwe item de oude vervangt en de oude weer in de lijst terug komt. Hierdoor hoef je niet elke keer de website opnieuw te laden als je een niewue kleding item wilt kiezen. 
 
-Ik heb daarnaast de styling verbeterd van het interface door de huistijl van Animal Crossing toe te voegen. Ik heb ook gebprobeert om een hover animatie te maken
+Ik heb daarnaast de styling verbeterd van het interface door de huistijl van Animal Crossing toe te voegen. Ik heb ook gebprobeert om een hover animatie te maken voor de villagers op de home pagina. Dit werkt alleen nog niet, omdat de angle van de strepen niet goed zijn, waardoor het niet goed aan elkaar aansluit. 
+
+### Vrijdag 24 April
 
 ###Bronnen
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
