@@ -80,7 +80,11 @@ Ik ben vandaag de uitdaging aangegaan om mijn Drag 'n Drop api te verbeteren doo
 
 Ik heb daarnaast de styling verbeterd van het interface door de huistijl van Animal Crossing toe te voegen. Ik heb ook gebprobeert om een hover animatie te maken voor de villagers op de home pagina. Dit werkt alleen nog niet, omdat de angle van de strepen niet goed zijn, waardoor het niet goed aan elkaar aansluit. 
 
-### Vrijdag 24 April
+### Afronding week 4
+Ik ben vergeleken met vorige weken veel verder gekomen met mijn project. Ik heb de drag and drop api erin gezet, begin gemaakt aan de styling en een concreet beeld voor mezelf van dingen die ik nog moet toevoegen om een mooi eindproduct te maken. Ik vind het wel jammer dat ik een kleine achterstand heb vergeleken met andere studenten omdat ik niet optijd een goed had bedacht. Daarintegen vind ik mijn idee wel heel leuk en denk ik dat ik alles optijd ga halen.
+
+Ik wil nog ervoor zorgen dat ik een outfit kan opslaan doormiddel van localStorage. Dit lijkt me nog de moeilijkste uitdagin tot nu toe omdat niet een heel concreet beeld heb bij hoe ik dit moet doen. Gelukkig heb ik wel een workshop van Jad gevolgd over hoe je localStrorage over hoe je bijvoorbeeld een getal kan opslaan. Wat ik verder nog graag wil toevoegen is meer styling om ervoor te zorgen dat het wat meer op Animal crossing lijkt. 
+
 
 ###Bronnen
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
@@ -88,4 +92,7 @@ https://codepen.io/Jacco01/pen/WbGPgmv
 
 AI prompts:
 How do I remove all currently equipped items when a button is clicked
+
+
+
 
