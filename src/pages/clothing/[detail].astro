@@ -30,9 +30,9 @@ const clothesResponse = await fetch(urlClothes, {
 });
 
 const clothesData = await clothesResponse.json();
-// this is a test
+
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
-console.log(headwearFilter[3])
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 const headwear = headwearFilter.slice(0, 50);
 ---
@@ -50,6 +50,7 @@ const headwear = headwearFilter.slice(0, 50);
                 <h1>{character}</h1>
                 <img src={details.image_url} alt={details.name} class="villager-img" />
             </div>
+            <button class="save-outfit-button">Save outfit</button>
 
             <article class="headwear-container">
                 <ul class="headwear">
@@ -80,6 +81,9 @@ const headwear = headwearFilter.slice(0, 50);
     const draggableElement = document.querySelectorAll('.draggable');
 
     const removeItemsButton = document.querySelector('.remove-items');
+    const saveOutfitButton = document.querySelector('.save-outfit-button');
+
+    let equippedItem = null;
 
     draggableElement.forEach(item => {
         item.addEventListener('dragstart', dragStart);
@@ -96,6 +100,53 @@ const headwear = headwearFilter.slice(0, 50);
 
     function dragOver(event) {
         event.preventDefault();
+    };
+
+
+    function saveOutfit(draggedEl) {
+
+        // Voorbeeld van localstorage van workshop van Jad
+        // counter
+        // const savedData = JSON.parse(localStorage.getItem("count"))
+
+        // let value = savedData.counter;
+        // const counter = document.querySelector('#counter');
+        // const button = document.querySelector('#add');
+
+        // button.addEventListener('click', () => {
+        //     value = value + 1;
+        //     counter.textContent = value;
+        //     const data = {
+        //         counter: value,
+        //     };
+        //     console.log(data)
+
+        //     // counter opslaan
+        //     localStorage.setItem("count", JSON.stringify(data));
+        // });
+        
+        // Met hulp van AI
+        // Prompt: How can I use LocalStorage to save two different elements and display it on another page? One element is from a content api the other from drag and drop api.
+        const villagerName = details.name;
+        const hatId = draggedEl.id;
+
+        // creating outfit object from previous vars
+        const outfit = {
+            villager:  villagerName,
+            outfit: hatId
+        };
+
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+        // JSON.parse turns data into a object
+        const savedOutfit = JSON.parse(localStorage.getItem('outfit')) || [];
+
+        // Add new outfit
+        savedOutfit.push(outfit);
+
+        // Stringify turns data into a string
+        localStorage.setItem('outfit', JSON.stringify(savedOutfit));
+        console.log('Saved outfit', outfit);
+
     };
 
     function drop(event) {
@@ -131,33 +182,16 @@ const headwear = headwearFilter.slice(0, 50);
         document.querySelector(".droppable").appendChild(draggedEl);
         draggedEl.classList.add('dropped');
 
-        equippedItem = droppedItem;
+        equippedItem = draggedEl;
 
-        savedHat(draggedEl);
+    };
 
-        
-
-
-        // Example localstorage
-        // counter
-        // const savedData = JSON.parse(localStorage.getItem("count"))
-
-        // let value = savedData.counter;
-        // const counter = document.querySelector('#counter');
-        // const button = document.querySelector('#add');
-
-        // button.addEventListener('click', () => {
-        //     value = value + 1;
-        //     counter.textContent = value;
-        //     const data = {
-        //         counter: value,
-        //     };
-        //     console.log(data)
-
-        //     // counter opslaan
-        //     localStorage.setItem("count", JSON.stringify(data));
-        // });
-
-    }
+    saveOutfitButton.addEventListener('click', () => {
+        if(equippedItem) {
+            saveOutfit(equippedItem);
+        } else {
+            console.log('no outfit!')
+        };
+    });
 
 </script>

@@ -29,7 +29,6 @@ const clothesResponse = await fetch(urlClothes, {
 });
 
 const clothesData = await clothesResponse.json();
-// this is a test
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
 console.log(headwearFilter[3])
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
@@ -44,13 +43,57 @@ const headwear = headwearFilter.slice(50, 100);
         </header>
         <main>
             <h1>Saved outfits</h1>
+            <button class="remove-items-button">remove outfits</button>
+
+            <ul class="saved-outfits"></ul>
         </main>
         <footer></footer>
         
     </body>
 </html>
 
-<script>
+<script define:vars={{ headwearFilter, villagers }}>
     // @ts-nocheck
+
+    const outfitList = document.querySelector('.saved-outfits');
+
+    const savedOutfits = JSON.parse(localStorage.getItem('outfit')) || [];
+
+    const removeOutfits = document.querySelector('.remove-items-button');
+    
+    savedOutfits.forEach(outfit => {
+        // api data name is without hat- so I remove it
+        const hatName = outfit.outfit.replace('hat-', '');
+
+        // Search for the same 
+        const outfitHat = headwearFilter.find( head => head.name === hatName);
+        console.log(outfitHat);
+
+        const outfitVillager = villagers.find( villager => villager.name === outfit.villager)
+
+        const listItem = document.createElement('li');
+
+        const villagerName = document.createElement('p');
+        villagerName.textContent = outfit.villager;
+
+        const villagerImage = document.createElement('img');
+        villagerImage.src = outfitVillager.image_url;
+        villagerImage.alt = outfitVillager.name;
+
+        const hatImage = document.createElement('img');
+        hatImage.src = outfitHat.variations[0].image_url;
+        hatImage.alt = outfitHat.name;
+
+        listItem.appendChild(villagerName);
+        listItem.appendChild(hatImage);
+        listItem.appendChild(villagerImage);
+
+        outfitList.appendChild(listItem);
+    });
+
+    removeOutfits.addEventListener('click', () => {
+        localStorage.removeItem('outfit');
+        outfitList.innerHTML = '';
+    })
 
 </script>
