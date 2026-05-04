@@ -1,8 +1,18 @@
 :root {
-    --interface-color-lightgray01: #FFFFF7;
-    --interface-color-lightgray02: #F9F4E8;
-    --interface-color-beige: #EEE9CA;
-    --interface-color-yellow: #FFEEA1;
-    --interface-color-green: #72691D;
-    --interface-color-brown: #735C4E;
+    --beige-1: #E9E2C7;
+    --beige-2: #E4DAB9;
+    --beige-3: #E7E0C0;
+    --green: #8AC78B;
+    --darkgreen: #72691D;
+    --brown: #5E472C;
+    --lightbrown: #8B7B67;
+    --white: #FEFEEE;
+    --orange: #FF7717;
+    --lightpink: #EDCDCD;
+    --yellow-1: #FFE0AF;
+    --yellow-2: #FFDD88;
+    --yellow-3: #FFC87F;
+
+
+
 }

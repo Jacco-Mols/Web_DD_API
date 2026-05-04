@@ -4,6 +4,10 @@ import '../styles/vars.css';
 import '../styles/global.css';
 import '../styles/villagers.css';
 
+import Header from '../components/header.astro';
+import Head from '../components/head.astro';
+
+
 const url = "https://api.nookipedia.com/villagers?pagination[itemsPerPage]=50";
 const response = await fetch(url, {
     headers: {
@@ -16,11 +20,11 @@ const data = await response.json();
 const villagers = data.slice(0, 50);
 ---
 <!-- Animal crossing -->
+
 <html lang="en">
+    <Head />
     <body>
-        <header>
-            <a href="/outfits/">Saved Outfits</a>
-        </header>
+        <Header />
         <main>
             <ul class="villagers-grid">
                 {villagers.map(villager => (

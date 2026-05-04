@@ -4,6 +4,9 @@ import '../../styles/global.css';
 import '../../styles/vars.css';
 import '../../styles/details.css';
 
+import Header from '../../components/header.astro';
+import Head from '../../components/head.astro';
+
 const urlVillagers = "https://api.nookipedia.com/villagers?pagination[itemsPerPage]=50";
 const Villagersresponse = await fetch(urlVillagers, {
     headers: {
@@ -38,16 +41,15 @@ const headwear = headwearFilter.slice(0, 50);
 ---
 
 <html lang="en">
+    <Head />
 <body>
-    <header>
-        <a href="/"><button>Go back</button></a>
-    </header>
-
+    <Header />
     <main>
         <section class="dress-character">
+            <h1>{character}</h1>
             <div class="villager-container" >
                 <div class="droppable" data-draggable-id="acorn knit cap"></div>
-                <h1>{character}</h1>
+                
                 <img src={details.image_url} alt={details.name} class="villager-img" />
             </div>
             <button class="save-outfit-button">Save outfit</button>
@@ -58,8 +60,8 @@ const headwear = headwearFilter.slice(0, 50);
                         // LET OP: <li> en <img> moeten altijd aan elkaar verbonden zijn (zonder spaties)
                         // want we maken later gebruik van "li:empty"
                         <li><img src={head.variations[0].image_url} alt={head.name} class='draggable'
-                            draggable="true" id={`hat-${head.name}`} /></li>
-                    ))};
+                            draggable="true" id={`hat-${head.name}`}/></li>
+                    ))}
                 </ul>
 
                 <button class="remove-items">Remove all items</button>

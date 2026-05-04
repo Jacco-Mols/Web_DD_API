@@ -1,35 +1,37 @@
-header {
-    .goback {
-        height: 3rem;
-        width: 6rem;
-        background-color: var(--interface-color-beige);
-        border-radius: 99px;
-        border: none;
-        margin-bottom: 2rem;
-
-        a {
-            list-style: none;
-            text-decoration: none;
-            color: black;
-        }
-    }
-}
-
 .dress-character {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    background-size: 100% 100%;
+    justify-items: center;
+
+    h1 {
+        grid-row: 1;
+        color: var(--brown)
+    }
 }
 
 .villager-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 55vw;
     height: 70vh;
-    background-color: var(--interface-color-beige);
+    background-color: var(--yellow-1);
+    background-image:
+        linear-gradient(45deg, var(--yellow-2) 25%, transparent 25%, transparent 75%, var(--yellow-2) 75%, var(--yellow-2)),
+        linear-gradient(45deg, var(--yellow-2) 25%, transparent 25%, transparent 75%, var(--yellow-2) 75%, var(--yellow-2)),
+        linear-gradient(45deg, transparent, transparent 50%, var(--yellow-3) 50%, var(--yellow-3));
     justify-self: center;
     margin: 2rem;
     margin-top: 0;
     border-radius: 2rem;
+    grid-row: 2;
+    border: solid 8px var(--white);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px, 50px 0px;
+    box-shadow: 2px 2px 10px var(--lightbrown);
     
     .villager-img {
         max-width: 100%;
@@ -46,26 +48,41 @@ header {
     height: 70vh;
     border-radius: 2rem;
     margin-bottom: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+    border: solid 8px var(--white);
 
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         overflow-x: scroll;
         scroll-behavior: smooth;
-        scroll-snap-type: mandatory;
         overscroll-behavior: contain;
         margin: 0;
         height: 70vh;
+        border-radius: 2rem;
+        scrollbar-width: none;
 
         li {
             display: flex;
             justify-content: center;
             scroll-snap-align: center;
-            margin-bottom: 5rem;
 
             img {
                 width: 8vw;
             }
+        }
+        li:nth-of-type(4n) {
+            background-color: var(--beige-1);
+        }
+        li:nth-of-type(4n + 3) {
+            background-color: var(--beige-1);
+        }
+        li:nth-of-type(4n + 1) {
+            background-color: var(--beige-3);
+        }
+        li:nth-of-type(4n + 2) {
+            background-color: var(--beige-3);
         }
     }
 }
@@ -74,7 +91,7 @@ header {
     width: 17rem;
     height: 11rem;
     position: absolute;
-    top: 9%;
+    top: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,11 +113,18 @@ header {
     display: block;
 }
 
+.save-outfit-button {
+    grid-row: 3;
+}
+
 @media (max-width: 870px) {
     .dress-character {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-self: center;
+        max-width: 80vw;
+        height: 150vh;
     }
 
     .villager-container {
@@ -108,6 +132,35 @@ header {
     }
 
     .headwear-container {
-        width: 100%;
+        width: 90%;
+        position: fixed;
+        bottom: 0%;
+        height: 20vh;
+
+        ul {
+            grid-template-columns:repeat(50, 40vw);
+            grid-template-rows: 1fr;
+            overflow-y: scroll;
+            
+            height: 20vh;
+            scrollbar-color: transparent;
+            scrollbar-width: none;
+
+            li {
+                height: 20vh;
+
+                img {
+                    width: 20vw;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+            li:nth-of-type(2n) {
+                background-color: var(--beige-1);
+            }
+            li:nth-of-type(2n + 1) {
+                background-color: var(--beige-3);
+            }
+        }
     }
 }

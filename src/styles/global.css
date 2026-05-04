@@ -1,16 +1,18 @@
 body {
     padding: 1rem;
-    background-color: var(--interface-color-lightgray02);
+    background-color: var(--beige-2);
 }
 
 h1 {
     text-align:center;
     justify-self: center;
     font-family: sans-serif;
+    color: var(--brown)
 }
 
 h2, h3, p {
     font-family: sans-serif;
+    color: var(--brown)
 }
 
 ul {
@@ -20,4 +22,31 @@ ul {
 
 img {
     max-width: 100%;
+}
+
+button {
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--white);
+    border: solid 5px transparent;
+    color: var(--lightbrown);
+    border-radius: 99px;
+
+    &:hover {
+        background-color: var(--brown);
+        color: var(--white);
+        cursor: pointer
+    }
+}
+
+header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
 }

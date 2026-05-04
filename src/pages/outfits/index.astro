@@ -2,6 +2,10 @@
 // @ts-nocheck
 import '../../styles/global.css';
 import '../../styles/vars.css';
+import '../../styles/outfit.css';
+
+import Header from '../../components/header.astro';
+import Head from '../../components/head.astro';
 
 const urlVillagers = "https://api.nookipedia.com/villagers?pagination[itemsPerPage]=50";
 const Villagersresponse = await fetch(urlVillagers, {
@@ -36,16 +40,13 @@ const headwear = headwearFilter.slice(50, 100);
 ---
 
 <html lang="en">
-
+    <Head />
     <body>
-        <header>
-            <a href="/"><button>Villagers</button></a>
-        </header>
+        <Header />
         <main>
             <h1>Saved outfits</h1>
-            <button class="remove-items-button">remove outfits</button>
-
-            <ul class="saved-outfits"></ul>
+            <ul class="saved-outfits villagers-grid"></ul>
+            <button class="remove-items-button">Remove all outfits</button>
         </main>
         <footer></footer>
         
@@ -56,9 +57,7 @@ const headwear = headwearFilter.slice(50, 100);
     // @ts-nocheck
 
     const outfitList = document.querySelector('.saved-outfits');
-
     const savedOutfits = JSON.parse(localStorage.getItem('outfit')) || [];
-
     const removeOutfits = document.querySelector('.remove-items-button');
     
     savedOutfits.forEach(outfit => {
@@ -71,6 +70,7 @@ const headwear = headwearFilter.slice(50, 100);
 
         const outfitVillager = villagers.find( villager => villager.name === outfit.villager)
 
+        // Make html elements where outfits will be placed
         const listItem = document.createElement('li');
 
         const villagerName = document.createElement('p');
@@ -84,6 +84,7 @@ const headwear = headwearFilter.slice(50, 100);
         hatImage.src = outfitHat.variations[0].image_url;
         hatImage.alt = outfitHat.name;
 
+        // Put elements in the ul
         listItem.appendChild(villagerName);
         listItem.appendChild(hatImage);
         listItem.appendChild(villagerImage);
@@ -91,7 +92,9 @@ const headwear = headwearFilter.slice(50, 100);
         outfitList.appendChild(listItem);
     });
 
+    // remove outfit data when button clicked
     removeOutfits.addEventListener('click', () => {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
         localStorage.removeItem('outfit');
         outfitList.innerHTML = '';
     })
