@@ -104,17 +104,14 @@ const headwear = headwearFilter.slice(0, 50);
         event.preventDefault();
     };
 
-
     function saveOutfit(draggedEl) {
 
         // Voorbeeld van localstorage van workshop van Jad
-        // counter
         // const savedData = JSON.parse(localStorage.getItem("count"))
 
         // let value = savedData.counter;
         // const counter = document.querySelector('#counter');
         // const button = document.querySelector('#add');
-
         // button.addEventListener('click', () => {
         //     value = value + 1;
         //     counter.textContent = value;
@@ -171,13 +168,7 @@ const headwear = headwearFilter.slice(0, 50);
         if (droppedItem) {
             droppedItem.classList.remove("dropped");
             ogList.querySelector("li:empty").appendChild(droppedItem);
-        }
-
-        removeItemsButton.addEventListener('click', () => {
-            droppedItem.classList.remove("dropped");
-            ogList.querySelector("li:empty").appendChild(droppedItem);
-            removeItemsButton.classList.remove('show'); 
-        })
+        };
 
         // appendChild - https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
         // Moves element from current position to new position. You are adding a new child to a parent (parent.appendChild(child))
@@ -185,15 +176,24 @@ const headwear = headwearFilter.slice(0, 50);
         draggedEl.classList.add('dropped');
 
         equippedItem = draggedEl;
+        originalPlace = ogList;
 
     };
 
+    // saves outfit on button click
     saveOutfitButton.addEventListener('click', () => {
         if(equippedItem) {
             saveOutfit(equippedItem);
         } else {
             console.log('no outfit!')
         };
+    });
+
+    // returns equippeditem to list
+    removeItemsButton.addEventListener('click', () => {
+        equippedItem.classList.remove("dropped");
+        originalPlace.querySelector("li:empty").appendChild(equippedItem);
+        removeItemsButton.classList.remove('show'); 
     });
 
 </script>
