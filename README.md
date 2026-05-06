@@ -85,13 +85,32 @@ Ik ben vergeleken met vorige weken veel verder gekomen met mijn project. Ik heb 
 
 Ik wil nog ervoor zorgen dat ik een outfit kan opslaan doormiddel van localStorage. Dit lijkt me nog de moeilijkste uitdagin tot nu toe omdat niet een heel concreet beeld heb bij hoe ik dit moet doen. Gelukkig heb ik wel een workshop van Jad gevolgd over hoe je localStrorage over hoe je bijvoorbeeld een getal kan opslaan. Wat ik verder nog graag wil toevoegen is meer styling om ervoor te zorgen dat het wat meer op Animal crossing lijkt. 
 
+### Meivakantie
+In de vakantie heb ik nog aan dit vak gewerkt omdat ik graag meer wilde toevoegen aan de website. Ik heb er als eerste voor gezorgd dat een outfit word opgeslagen met LocalStorage op een aparte pagina. Hiervoor moest ik wel een voobeeld laten maken door AI om een goed beeld te krijgen localStorage. Achteraf vond ik dit wel makkelijker dan ik had gedacht, In principe moet gewoon een item ('outfit') aanmaken en hierin de data van de outfit inzetten, dus welke villager en welk kledingstuk. 
 
-###Bronnen
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+<img width="1262" height="780" alt="meivakantie" src="https://github.com/user-attachments/assets/8f7116f0-1d9d-47dc-a668-99c108c9d51a" />
+
+Verder heb ik ook styling de van website veranderd. Ik vond het eerst nog wel in de huisstijl van Animal Crossing, maar nog eigenlijk niet naar wens. Ik heb nu bijvoorbeeld een linear gradient toegevoegd op de achtergrond van de villagers kaartjes. Ik had hier een voorbeeld van gevonden op codepen die erg in de stijl was. Deze heb ik dus toegepast en met nog een animatie op een hover. Als laatste heb ik er ook voor gezorgd dat mijn website responsive is.
+<img width="1496" height="773" alt="Meivakantie2" src="https://github.com/user-attachments/assets/7d80b4bd-8657-4af8-bab9-28c042134c58" />
+
+### laatste lootjes Woensdag 6 Mei
+Ik heb vandaag er nog voor gezorgd dat de drag 'n drop ook werkt op touchscreen. Drag and drop heeft nog geen functies voor op een touchscreen, dus ik heb nu met hulp van Syd ervoor gezorgd dat je de kleding items ook kan veranderen als je erop klikt, dit vind ik qua UX heel fijn werken want je kan op elk scherm formaat nu klikken en op computer of laptop ook draggen.
+
+### Bronnen
+Codepen voorbeelden:
 https://codepen.io/Jacco01/pen/WbGPgmv
+https://codepen.io/algcifaldi/pen/vEweYM?editors=1100
+
+Javascript uitleg:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
 
 AI prompts:
-How do I remove all currently equipped items when a button is clicked
+"How do I remove all currently equipped items when a button is clicked?"
+"How can I use LocalStorage to save two different elements and display it on another page? One element is from a content api the other from drag and drop api."
+
 
 
 
