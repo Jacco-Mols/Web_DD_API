@@ -96,6 +96,12 @@ Verder heb ik ook styling de van website veranderd. Ik vond het eerst nog wel in
 ### laatste lootjes Woensdag 6 Mei
 Ik heb vandaag er nog voor gezorgd dat de drag 'n drop ook werkt op touchscreen. Drag and drop heeft nog geen functies voor op een touchscreen, dus ik heb nu met hulp van Syd ervoor gezorgd dat je de kleding items ook kan veranderen als je erop klikt, dit vind ik qua UX heel fijn werken want je kan op elk scherm formaat nu klikken en op computer of laptop ook draggen.
 
+## Reflectie
+Ik ben over het algemeen heel trots op mezelf op de dingen die ik heb bereikt tijdens dit traject, ik heb geleerd om met drag 'n drop api te werken, locaStorage, een content api en hoe je dit via Astro doet. Daarnaast heb ik ook geleerd mijn Astro website live te zetten via Render.com.
+Ik vond het gedeelte waar we met de terminal wel veel lastiger dan ik had gedacht, ik kwam vak tegen nieuwe problemen aan en was hier niet aan gewend. Ik merkte wel dat ik hier opaalment beter en handiger in werd wat ook rust bracht tijdens het werken. 
+
+Ik vond het coderen zelf wel heel leuk. Ik had in het begin niet een duidelijk idee en ik was gedeeltelijk ook op een API-key aan het wachten waardoor ik aanhet begin nog wel een achterstand had. Zodra ik het idee concreet had uitgewerkt en had bedacht om met localStorage en Drag and drop api te werken, maakte ik een snelle voortgang. 
+
 ### Bronnen
 Codepen voorbeelden:
 https://codepen.io/Jacco01/pen/WbGPgmv
