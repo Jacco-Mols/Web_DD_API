@@ -59,8 +59,8 @@ const headwear = headwearFilter.slice(0, 50);
                     {headwear.map(head => (
                         // LET OP: <li> en <img> moeten altijd aan elkaar verbonden zijn (zonder spaties)
                         // want we maken later gebruik van "li:empty"
-                        <li><img src={head.variations[0].image_url} alt={head.name} class='draggable'
-                            draggable="true" id={`hat-${head.name}`}/></li>
+                        <li><button class="drag-button"><img src={head.variations[0].image_url} alt={head.name} class='draggable'
+                            draggable="true" id={`hat-${head.name}`}/></button></li>
                     ))}
                 </ul>
 
@@ -89,14 +89,16 @@ const headwear = headwearFilter.slice(0, 50);
 
     draggableElement.forEach(item => {
         item.addEventListener('dragstart', dragStart);
+        item.addEventListener('click', clickedItem);
     });
 
     droppableElement.forEach(item => {
         item.addEventListener('dragover', dragOver);
         item.addEventListener('drop', drop);
     });
-
+    
     function dragStart(event) {
+        dragSupported = true
         event.dataTransfer.setData('text', event.target.id);
     };
 
@@ -167,7 +169,7 @@ const headwear = headwearFilter.slice(0, 50);
         const droppedItem = document.querySelector(".droppable .dropped");
         if (droppedItem) {
             droppedItem.classList.remove("dropped");
-            ogList.querySelector("li:empty").appendChild(droppedItem);
+            ogList.querySelector("button:empty").appendChild(droppedItem);
         };
 
         // appendChild - https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
@@ -178,6 +180,35 @@ const headwear = headwearFilter.slice(0, 50);
         equippedItem = draggedEl;
         originalPlace = ogList;
 
+    };
+
+    // Met hulp van Syd, stappen:
+    // 1. zet buttons om de images zodat er ook een focus style is CHECK
+    // 2. voeg een click event toe op de buttons, die de hoedjes op het karakter zet
+    // 3. check of er al een hoedje op zit, en zorg dat het oude hoedje terug op zn plek komt als dat zo is
+    function clickedItem(event) {
+        // clicked item
+        console.log(event.target);
+
+        const draggedEl = event.target;
+        // Let op: niet altijd de echte dropZone
+        const dropZone = document.querySelector('.droppable')
+        const ogList = document.querySelector('.headwear');
+        const removeItemsButton = document.querySelector('.remove-items');
+        removeItemsButton.classList.add('show');
+
+        // Met hulp van Jad
+        const droppedItem = document.querySelector(".droppable .dropped");
+        if (droppedItem) {
+            droppedItem.classList.remove("dropped");
+            ogList.querySelector("button:empty").appendChild(droppedItem);
+        };
+
+        dropZone.appendChild(draggedEl);
+        draggedEl.classList.add('dropped');
+
+        equippedItem = draggedEl;
+        originalPlace = ogList;
     };
 
     // saves outfit on button click
