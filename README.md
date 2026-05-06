@@ -117,4 +117,6 @@ AI prompts:
 "How do I remove all currently equipped items when a button is clicked?"
 "How can I use LocalStorage to save two different elements and display it on another page? One element is from a content api the other from drag and drop api."
 
+Inspiratie user Interface:
+https://www.jamesbreyes.com/animal-crossing-ux-ui
 
