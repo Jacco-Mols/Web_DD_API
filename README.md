@@ -100,7 +100,7 @@ Ik heb vandaag er nog voor gezorgd dat de drag 'n drop ook werkt op touchscreen.
 Ik ben over het algemeen heel trots op mezelf op de dingen die ik heb bereikt tijdens dit traject, ik heb geleerd om met drag 'n drop api te werken, locaStorage, een content api en hoe je dit via Astro doet. Daarnaast heb ik ook geleerd mijn Astro website live te zetten via Render.com.
 Ik vond het gedeelte waar we met de terminal wel veel lastiger dan ik had gedacht, ik kwam vak tegen nieuwe problemen aan en was hier niet aan gewend. Ik merkte wel dat ik hier opaalment beter en handiger in werd wat ook rust bracht tijdens het werken. 
 
-Ik vond het coderen zelf wel heel leuk. Ik had in het begin niet een duidelijk idee en ik was gedeeltelijk ook op een API-key aan het wachten waardoor ik aanhet begin nog wel een achterstand had. Zodra ik het idee concreet had uitgewerkt en had bedacht om met localStorage en Drag and drop api te werken, maakte ik een snelle voortgang. 
+Ik vond het coderen zelf wel heel leuk. Ik had in het begin niet een duidelijk idee en ik was gedeeltelijk ook op een API-key aan het wachten waardoor ik aanhet begin nog wel een achterstand had. Zodra ik het idee concreet had uitgewerkt en had bedacht om met localStorage en Drag and drop api te werken, ben ik snel verder gekomen.
 
 ### Bronnen
 Codepen voorbeelden:
@@ -116,8 +116,5 @@ https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
 AI prompts:
 "How do I remove all currently equipped items when a button is clicked?"
 "How can I use LocalStorage to save two different elements and display it on another page? One element is from a content api the other from drag and drop api."
-
-
-
 
 
