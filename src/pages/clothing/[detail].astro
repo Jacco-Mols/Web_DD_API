@@ -86,6 +86,7 @@ const headwear = headwearFilter.slice(0, 50);
     const saveOutfitButton = document.querySelector('.save-outfit-button');
 
     let equippedItem = null;
+    let originalPlace = null;
 
     draggableElement.forEach(item => {
         item.addEventListener('dragstart', dragStart);
@@ -98,7 +99,6 @@ const headwear = headwearFilter.slice(0, 50);
     });
     
     function dragStart(event) {
-        dragSupported = true
         event.dataTransfer.setData('text', event.target.id);
     };
 
@@ -147,7 +147,6 @@ const headwear = headwearFilter.slice(0, 50);
         // Stringify turns data into a string
         localStorage.setItem('outfit', JSON.stringify(savedOutfit));
         console.log('Saved outfit', outfit);
-
     };
 
     function drop(event) {
@@ -215,15 +214,21 @@ const headwear = headwearFilter.slice(0, 50);
     saveOutfitButton.addEventListener('click', () => {
         if(equippedItem) {
             saveOutfit(equippedItem);
+            saveOutfitButton.classList.remove('button-click');
+
+            saveOutfitButton.offsetWidth
+            saveOutfitButton.classList.add('button-click');
+
         } else {
-            console.log('no outfit!')
+            console.log('no outfit!');
+            saveOutfitButton.classList.remove('button-click');
         };
     });
 
     // returns equippeditem to list
     removeItemsButton.addEventListener('click', () => {
         equippedItem.classList.remove("dropped");
-        originalPlace.querySelector("li:empty").appendChild(equippedItem);
+        originalPlace.querySelector("button:empty").appendChild(equippedItem);
         removeItemsButton.classList.remove('show'); 
     });
 
