@@ -35,7 +35,6 @@ const clothesResponse = await fetch(urlClothes, {
 const clothesData = await clothesResponse.json();
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
 console.log(headwearFilter[3])
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 const headwear = headwearFilter.slice(50, 100);
 ---
 

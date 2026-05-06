@@ -33,7 +33,6 @@ const clothesResponse = await fetch(urlClothes, {
 });
 
 const clothesData = await clothesResponse.json();
-
 const headwearFilter = clothesData.filter(clotheData => clotheData.category === 'Headwear')
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
@@ -63,13 +62,11 @@ const headwear = headwearFilter.slice(0, 50);
                             draggable="true" id={`hat-${head.name}`}/></button></li>
                     ))}
                 </ul>
-
                 <button class="remove-items">Remove all items</button>
             </article>
 
         </section>
     </main>
-
     <footer></footer>
 </body>
 
@@ -180,15 +177,11 @@ const headwear = headwearFilter.slice(0, 50);
         originalPlace = ogList;
 
     };
-
     // Met hulp van Syd, stappen:
     // 1. zet buttons om de images zodat er ook een focus style is CHECK
     // 2. voeg een click event toe op de buttons, die de hoedjes op het karakter zet
     // 3. check of er al een hoedje op zit, en zorg dat het oude hoedje terug op zn plek komt als dat zo is
     function clickedItem(event) {
-        // clicked item
-        console.log(event.target);
-
         const draggedEl = event.target;
         // Let op: niet altijd de echte dropZone
         const dropZone = document.querySelector('.droppable')

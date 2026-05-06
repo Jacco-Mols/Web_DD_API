@@ -1,4 +1,3 @@
-
 .villagers-grid {
     width: 75vw;
     display: grid;
@@ -30,7 +29,6 @@
             animation: scroll 3s linear infinite;
             transform: scale(1.05);
             cursor: pointer;
-
         }
     }
 
