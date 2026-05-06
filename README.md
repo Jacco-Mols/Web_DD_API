@@ -120,3 +120,6 @@ AI prompts:
 Inspiratie user Interface:
 https://www.jamesbreyes.com/animal-crossing-ux-ui
 
+Gebruikte content api:
+https://api.nookipedia.com/doc
+
